@@ -80,6 +80,7 @@ const router = createBrowserRouter([
         loader: ({params})=> fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`),
         Component: PostDetail
       }
+      // chaile ekhane o 404 status dekhano jabe, but ager components gula show korbe 
     ]
   },
   {
@@ -99,6 +100,11 @@ const router = createBrowserRouter([
   {
     path: 'app2',
     element: <App></App>
+  },
+  // ekhane dekhale just eta e show korbe 
+  {
+    path: '*', //baki path gula, all 
+    element: <p>Not Found: 404 Status</p>
   }
 ])
 
